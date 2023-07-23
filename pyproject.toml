@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "etawatch"
+authors = [
+    {name = "Rick D Gray", email = "rickdgray@outlook.com"},
+]
+description = "Like a stopwatch, but it also gives you an ETA"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "GPL-3.0-or-later", file = "LICENSE"}
+
+[project.urls]
+Homepage = "https://github.com/rickdgray/etawatch"
