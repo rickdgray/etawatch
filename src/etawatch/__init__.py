@@ -1,5 +1,7 @@
-__version__ = "1.0.0"
-__author__ = "Rick D. Gray"
-__email__ = "rickdgray@outlook.com"
-__license__ = "GPL-3.0-or-later"
-__all__ = ["etawatch"]
+import importlib.metadata as metadata
+
+__version__ = metadata.version(__name__)
+__author__ = metadata.metadata(__name__)['Author']
+__email__ = metadata.metadata(__name__)['Author-email']
+__license__ = metadata.metadata(__name__)['License']
+__all__ = [__name__]
