@@ -2,6 +2,10 @@ from time import perf_counter
 
 class etawatch:
     def __init__(self, total_laps, max_laps_to_avg=None):
+        if total_laps < 1:
+            raise ValueError("Total laps must be greater than 0")
+        if max_laps_to_avg is not None and max_laps_to_avg < 1:
+            raise ValueError("Max laps to average must be greater than 0")
         self.times = []
         self.total_laps = total_laps
         self.max_laps_to_avg = max_laps_to_avg
@@ -24,7 +28,7 @@ class etawatch:
             self.times.pop(0)
         self.i += 1
         average = sum(self.times) / len(self.times)
-        eta = average * (self.total_laps - self.i) / 60
+        eta = average * max(0, self.total_laps - self.i) / 60
         return eta, lap
 
     __call__ = __next__
