@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "etawatch"
-version = "1.0.2"
+version = "1.0.3"
 authors = [
     {name = "Rick D. Gray", email = "rickdgray@outlook.com"},
 ]
